@@ -90,6 +90,10 @@ app.get('/api/friends/:id', authenticator, (req, res) => {
   }
 });
 
+app.get('', (req, res) => {
+  res.status(200).json("Working");
+});
+
 app.post('/api/friends', authenticator, (req, res) => {
   const friend = { id: getNextId(), ...req.body };
 
